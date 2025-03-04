@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.pumpkinmc.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ClientConnectionMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
