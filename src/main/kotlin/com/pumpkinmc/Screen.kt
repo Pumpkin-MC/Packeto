@@ -9,8 +9,8 @@ import net.minecraft.util.Colors
 import java.util.concurrent.CopyOnWriteArrayList
 
 object Screen : LayeredDrawer.Layer {
-    var sent_packets: MutableList<Packet<*>> = CopyOnWriteArrayList();
-    var received_packets: MutableList<Packet<*>> = CopyOnWriteArrayList();
+    var sent_packets: MutableList<Packet<*>> = CopyOnWriteArrayList()
+    var received_packets: MutableList<Packet<*>> = CopyOnWriteArrayList()
 
     override fun render(context: DrawContext, tickCounter: RenderTickCounter) {
         context.drawText(
@@ -20,11 +20,11 @@ object Screen : LayeredDrawer.Layer {
             0,
             Colors.RED,
             false
-        );
-        if (sent_packets.size >= 20) sent_packets.removeFirst();
-        var i = 6;
+        )
+        if (sent_packets.size >= 20) sent_packets.removeFirst()
+        var i = 6
         for (packet in sent_packets) {
-            i += 10;
+            i += 10
             context.drawText(
                 MinecraftClient.getInstance().textRenderer,
                 packet.packetType.id.path,
@@ -32,7 +32,7 @@ object Screen : LayeredDrawer.Layer {
                 i,
                 Colors.WHITE,
                 false
-            );
+            )
         }
         context.drawText(
             MinecraftClient.getInstance().textRenderer,
@@ -41,11 +41,11 @@ object Screen : LayeredDrawer.Layer {
             0,
             Colors.RED,
             false
-        );
-        if (received_packets.size >= 20) received_packets.removeFirst();
-        var x = 6;
+        )
+        if (received_packets.size >= 20) received_packets.removeFirst()
+        var x = 6
         for (packet in received_packets) {
-            x += 10;
+            x += 10
             context.drawText(
                 MinecraftClient.getInstance().textRenderer,
                 packet.packetType.id.path,
@@ -53,7 +53,7 @@ object Screen : LayeredDrawer.Layer {
                 x,
                 Colors.WHITE,
                 false
-            );
+            )
         }
     }
 }
