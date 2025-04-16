@@ -3,7 +3,6 @@ package com.pumpkinmc
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.client.rendering.v1.HudLayerRegistrationCallback
 import net.fabricmc.fabric.api.client.rendering.v1.IdentifiedLayer
-import net.minecraft.network.packet.Packet
 import net.minecraft.util.Identifier
 import org.slf4j.LoggerFactory
 

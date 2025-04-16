@@ -1,33 +1,33 @@
 {
-	"schemaVersion": 1,
-	"id": "packeto",
-	"version": "${version}",
-	"name": "Packeto",
-	"description": "See Incoming and Outgoing Packets",
-	"authors": [
-		"Alexander Medvedev"
-	],
-	"license": "MIT",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			{
-				"value": "com.pumpkinmc.Packeto",
-				"adapter": "kotlin"
-			}
-		]
-	},
-	"mixins": [
-		"packeto.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.16.10",
-		"minecraft": "~1.21.4",
-		"java": ">=21",
-		"fabric-api": "*",
-		"fabric-language-kotlin": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "packeto",
+  "version": "${version}",
+  "name": "Packeto",
+  "description": "See Incoming and Outgoing Packets",
+  "authors": [
+    "Alexander Medvedev"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "com.pumpkinmc.Packeto",
+        "adapter": "kotlin"
+      }
+    ]
+  },
+  "mixins": [
+    "packeto.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
 }

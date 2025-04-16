@@ -1,21 +1,12 @@
 package com.pumpkinmc
 
-import io.netty.buffer.ByteBuf
 import net.minecraft.client.MinecraftClient
 import net.minecraft.client.gui.DrawContext
 import net.minecraft.client.gui.LayeredDrawer
 import net.minecraft.client.render.RenderTickCounter
-import net.minecraft.network.NetworkPhase
-import net.minecraft.network.NetworkState
-import net.minecraft.network.listener.PacketListener
 import net.minecraft.network.packet.Packet
-import net.minecraft.network.state.*
 import net.minecraft.util.Colors
-import java.util.Collections
 import java.util.concurrent.CopyOnWriteArrayList
-import java.util.function.Function
-import java.util.stream.Collectors
-import java.util.stream.Stream
 
 object Screen : LayeredDrawer.Layer {
     var sent_packets: MutableList<Packet<*>> = CopyOnWriteArrayList();
